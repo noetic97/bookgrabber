@@ -1,0 +1,27 @@
+.book-container {
+  text-align: center;
+  padding: 25px 50px;
+  
+  .read-banner-container {
+    position: relative;
+    text-align: center;
+    
+    .book-is-read {
+      background-color: #B33A3A;
+      color: #f4f4f4;
+      padding: 10px;
+      position: absolute;
+      border-radius: 15px;
+      top: 6%;
+      left: 38.5%;
+      transform: translate(-50%, -50%);
+      transform: rotate(-45deg);
+    }
+    
+    .single-cover-image {
+      height: 30vh;
+    }
+  }
+
+}
+

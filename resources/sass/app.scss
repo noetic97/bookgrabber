@@ -6,3 +6,25 @@
 @import 'add_book';
 @import 'footer';
 
+body {
+  font-family: sans-serif;
+  letter-spacing: 0.025rem;
+  
+  #app {
+    min-height: 100vh;
+    position: relative;
+    
+    .list-container,
+    .booklist-container,
+    .add-book-container {
+      padding-bottom: 2.5rem;    /* Footer height */
+    }
+    
+    .back-to-list-btn {
+      padding: 10px;
+      margin: 20px auto;
+      background-color: #003EFF;
+      color: #f4f4f4;
+    }
+  }
+}

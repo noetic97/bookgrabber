@@ -1,0 +1,81 @@
+.booklist-container {
+  display: flex;
+  flex-direction: row;
+  
+  .list-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    h4 {
+      font-size: 2rem;
+      color: #003EFF;
+    }
+    
+    button {
+      padding: 10px;
+      background-color: #003EFF;
+      color: #f4f4f4;
+      margin: 20px;
+    }
+    
+    select {
+      padding: 10px;
+      margin: 20px;
+    }
+  }
+  
+  .read-banner-container {
+    position: relative;
+    text-align: center;
+    
+    .book-is-read {
+      background-color: #B33A3A;
+      color: #f4f4f4;
+      padding: 10px;
+      position: absolute;
+      border-radius: 15px;
+      top: 8%;
+      left: -2%;
+      transform: translate(-50%, -50%);
+      transform: rotate(-45deg);
+    }
+  }
+  
+  .list-body {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    
+    .list-book {
+      flex: 1 0 17%;
+      background-color: #f4f4f4;
+      margin: 10px;
+      padding-bottom: 10px;
+      max-width: 250px;
+      min-width: 150px;
+      min-height: 400px;
+      
+      .book-title {
+        height: 2.5rem;
+      }
+      
+      button {
+        padding: .5rem;
+        position: relative;
+        top: 0;
+        background-color: #B33A3A;
+        color: #f4f4f4;
+        letter-spacing: 0.025rem;
+
+      }
+    }
+  }
+  
+  .multi-cover-image {
+    height: 20vh;
+  }
+}
+
