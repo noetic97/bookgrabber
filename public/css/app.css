@@ -519,8 +519,19 @@ template {
   min-width: 150px;
 }
 
-.booklist-container .list-body .list-book .book-title {
+.booklist-container .list-body .list-book a {
+  text-decoration: none;
+}
+
+.booklist-container .list-body .list-book a .book-title {
   height: 2.5rem;
+  font-size: 1.2rem;
+  color: black;
+  margin: 15px 10px 0px;
+}
+
+.booklist-container .list-body .list-book a .book-author {
+  color: #0a0a0a;
 }
 
 .booklist-container .list-body .list-book button {
