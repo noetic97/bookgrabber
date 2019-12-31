@@ -1,0 +1,38 @@
+// Breakpoints (Example: @include breakpoint(xs) { YOUR CODE GOES HERE } )
+@mixin breakpoint($point) {
+  // Extra small devices (0px +)
+  @if $point == xs {
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      @content;
+    }
+  }
+    // Small devices (576px - 767px)
+  @else if $point == sm {
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      @content;
+    }
+  }
+    // Tablets (768px - 991px)
+  @else if $point == tb {
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  }
+    // Medium Devices, Notebooks (992px +)
+  @else if $point == md {
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  }
+    // Large Devices, Wide Screens
+  @else if $point == desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @else if $point == desctop_menu {
+    @media only screen and (min-width: 767px) {
+      @content;
+    }
+  }
+}
