@@ -1,0 +1,36 @@
+.header {
+  height: 25vh;
+  width: 100vw;
+  background-image: url('/assets/chuttersnap-AG2Ct_DqCh0-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  
+  .container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    .navbar-brand {
+      color: #003EFF;
+
+      h1 {
+        font-size: 6rem;
+        font-weight: 700;
+        font-family: sans-serif;
+        color: #003EFF;
+        text-shadow:
+          -1px -1px 0 #fff,
+          1px -1px 0 #fff,
+          -1px 1px 0 #fff,
+          1px 1px 0 #fff;
+        
+          @include breakpoint(xs) {
+            font-size: 3rem;
+        }
+      }
+    }
+  }
+}
