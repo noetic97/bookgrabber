@@ -56118,7 +56118,7 @@ function (_Component) {
             key: i
           }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
             alt: "".concat(book.volumeInfo.title, " book"),
-            src: "http://books.google.com/books/content?id=".concat(book.id, "&printsec=frontcover&img=1&zoom=1&source=gbs_api")
+            src: "https://books.google.com/books/content?id=".concat(book.id, "&printsec=frontcover&img=1&zoom=1&source=gbs_api")
           }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
             className: "book-title"
           }, book.volumeInfo.title), authors.map(function (author, i) {

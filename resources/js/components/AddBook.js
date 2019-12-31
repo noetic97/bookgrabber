@@ -93,7 +93,7 @@ class AddBook extends Component {
                 return (
                   <div className="results-book" key={i}>
                     <div>
-                      <img alt={`${book.volumeInfo.title} book`} src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} />
+                      <img alt={`${book.volumeInfo.title} book`} src={`https://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} />
                       <div>
                         <h3 className="book-title">{book.volumeInfo.title}</h3>
                         {
