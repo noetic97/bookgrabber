@@ -44,7 +44,7 @@ class AddBook extends Component {
     let bookDescription = bookResults.volumeInfo.description ? bookResults.volumeInfo.description : 'NULL';
     let publishedDate = bookResults.volumeInfo.publishedDate ? bookResults.volumeInfo.publishedDate : 'NULL';
     let publisher = bookResults.volumeInfo.publisher ? bookResults.volumeInfo.publisher : 'NULL';
-    let coverImageUrl = `http://books.google.com/books/content?id=${bookResults.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`
+    let coverImageUrl = `https://books.google.com/books/content?id=${bookResults.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`
     let authors = ['Unknown'];
     if (bookResults.volumeInfo.authors) {
       authors = bookResults.volumeInfo.authors;

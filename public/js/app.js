@@ -56033,7 +56033,7 @@ function (_Component) {
       var bookDescription = bookResults.volumeInfo.description ? bookResults.volumeInfo.description : 'NULL';
       var publishedDate = bookResults.volumeInfo.publishedDate ? bookResults.volumeInfo.publishedDate : 'NULL';
       var publisher = bookResults.volumeInfo.publisher ? bookResults.volumeInfo.publisher : 'NULL';
-      var coverImageUrl = "http://books.google.com/books/content?id=".concat(bookResults.id, "&printsec=frontcover&img=1&zoom=1&source=gbs_api");
+      var coverImageUrl = "https://books.google.com/books/content?id=".concat(bookResults.id, "&printsec=frontcover&img=1&zoom=1&source=gbs_api");
       var authors = ['Unknown'];
 
       if (bookResults.volumeInfo.authors) {
