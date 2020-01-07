@@ -2,14 +2,20 @@
 
 use Illuminate\Support\Str;
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+if (getenv("APP_ENV") !== 'local') {
+  $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+  $host = $url["host"];
+  $username = $url["user"];
+  $password = $url["pass"];
+  $database = substr($url["path"], 1);
+  $conn = new mysqli($host, $username, $password, $database);
+  $default = env('DB_CONNECTION', 'your_heroku_mysql_connection');
+} else {
+  $default = env('DB_CONNECTION', 'mysql');
+}
 
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
 
-$conn = new mysqli($host, $username, $password, $database);
+
 
 return [
 
@@ -24,8 +30,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'your_heroku_mysql_connection'), // heroku connection
-    // 'default' => env('DB_CONNECTION', 'mysql'), // use for local dev
+    'default' => $default,
 
     /*
     |--------------------------------------------------------------------------
@@ -73,7 +78,7 @@ return [
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'password' => env('DB_PASSWORD', 'root'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
